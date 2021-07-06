@@ -6,6 +6,14 @@ var serviceWorkerOption = {
     "/icon-384x384.png",
     "/icon-512x512.png",
     "/manifest.json",
+    "/images/broke.png",
+    "/images/lets-eat.png",
+    "/images/logo.png",
+    "/images/undraw_empty_xct9.png",
+    "/images/heros/hero-image_1.jpg",
+    "/images/heros/hero-image_2.jpg",
+    "/images/heros/hero-image_3.jpg",
+    "/images/heros/hero-image_4.jpg",
     "/index.html"
   ]
 };

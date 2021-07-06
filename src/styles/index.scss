@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import "variables";
+@import "layouts";
+@import "navbar";
+@import "keyframes";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-default;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    background-color: $background-color;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.grid {
+    display: grid !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.primary-font {
+    font-family: $font-default !important;
+}
+
+.secondary-font {
+    font-family: $third-font !important;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.overflow-x-scroll {
+    overflow-x: scroll;
+}
+
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.my-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
+.relative {
+    position: relative !important;
+}
+
+@for $i from 0 through 5 {
+    .mt-#{$i} {
+        margin-top: #{$i}rem !important;
+    }
+    .mb-#{$i} {
+        margin-bottom: #{$i}rem !important;
+    }
+    .ml-#{$i} {
+        margin-left: #{$i}rem !important;
+    }
+    .mr-#{$i} {
+        margin-right: #{$i}rem !important;
+    }
+
+    .pt-#{$i} {
+        padding-top: #{$i}rem !important;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: #{$i}rem !important;
+    }
+
+    .pl-#{$i} {
+        padding-left: #{$i}rem !important;
+    }
+
+    .pr-#{$i} {
+        padding-right: #{$i}rem !important;
+    }
+
+    .px-#{$i} {
+        padding-right: #{$i}rem !important;
+        padding-left: #{$i}rem !important;
+    }
+
+    .py-#{$i} {
+        padding-right: #{$i}rem !important;
+        padding-left: #{$i}rem !important;
+    }
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+footer {
+    margin-top: 5rem;
+    min-height: 200px;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.none {
+    display: none;
+}
+
+a {
+    min-width: 44px !important;
+    min-height: 44px !important;
+}
+
+input {
+    border: none;
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px rgba(51, 51, 51, 0.082);
+    line-height: 24px;
+    &:focus-visible {
+        border: none;
+        box-shadow: 1px 1px 1px 2px rgba(51, 51, 51, 0.082);
+    }
+}
+
+textarea {
+    border: none;
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px rgba(51, 51, 51, 0.082);
+}

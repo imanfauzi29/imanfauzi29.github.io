@@ -1,0 +1,180 @@
+.navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: .5em 0;
+    background-color: rgba(51, 51, 51, 0.123);
+    box-shadow: 4px 4px 8px 4px rgba(41, 41, 41, 0.233);
+    transition: background-color 0.2s ease-out;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        span {
+            font-family: $third-font;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+    }
+
+    &.bg-light {
+        background-color: $light;
+        ul li a {
+            color: $dark;
+            &::before {
+                background-color: $dark;
+            }
+        }
+        #menuToggle {
+            > span {
+                background-color: $dark;
+                &::before,
+                &::after {
+                    background-color: $dark;
+                }
+            }
+        }
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: $light;
+        overflow: hidden;
+        z-index: 9999;
+
+        &.show {
+            width: 50%;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            list-style: none;
+        }
+        a {
+            position: relative;
+            display: block;
+            color: $light;
+            text-decoration: none;
+            line-height: $line-height;
+            transition: letter-spacing 0.3s linear;
+            &:before {
+                content: "";
+                bottom: 0;
+                position: absolute;
+                width: 0%;
+                height: 2px;
+                transition: width 0.3s ease;
+                background-color: $light;
+            }
+
+            &:hover {
+                font-family: $secondary-font;
+                font-style: italic;
+                font-weight: 600;
+
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            height: 100vh;
+            width: 0px;
+            top: 0;
+            padding-top: 3rem;
+            transition: width 0.8s cubic-bezier(0.57, -0.47, 0.52, 1.46);
+
+            a {
+                display: inline-block;
+                color: $dark;
+                &:hover {
+                    letter-spacing: 5px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .menu {
+            position: relative;
+            background-color: transparent;
+            li {
+                display: inline-block;
+            }
+
+            a {
+                padding: 0.5rem;
+                margin-left: 3em;
+            }
+        }
+
+        #menuToggle {
+            display: none !important;
+        }
+    }
+
+    #menuToggle {
+        cursor: pointer;
+        display: inline-block;
+        padding: 18px 10px;
+        position: relative;
+        user-select: none;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        z-index: 99999;
+
+        &:focus-within {
+            outline: -webkit-focus-ring-color auto 1px;
+        }
+
+        > span {
+            display: block;
+            position: relative;
+            width: 24px;
+            height: 2px;
+            background-color: $light;
+            transition: background-color 0.3s ease;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                background-color: $light;
+                height: 100%;
+                display: block;
+                transition: transform 0.3s ease;
+            }
+            &::before {
+                top: -5px;
+            }
+            &::after {
+                top: 5px;
+            }
+        }
+
+        &.active {
+            > span {
+                background-color: transparent;
+                &::after {
+                    background-color: $primary;
+                    transform: rotate(-45deg) translateY(-7px);
+                }
+                &::before {
+                    background-color: $primary;
+                    transform: rotate(45deg) translateY(7px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+/** VARIABLES */
+$font-default: Arial, Helvetica, sans-serif;
+$secondary-font: "Architects Daughter", cursive;
+$third-font: "Varela Round", sans-serif;
+
+$primary: #11999e;
+$light: #f4f9f9;
+$dark: #02475e;
+$white: #fff;
+$success: #29bb89;
+$secondary: #d8e3e7;
+$warning: #ffc947;
+
+$font-weight: 400;
+$line-height: 1.5;
+$background-color: $light;
+
+$container-widths: (
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+);
+
+$colors: (
+    primary: $primary,
+    secondary: $secondary,
+    dark: $dark,
+    white: $white,
+    light: $light,
+    success: $success,
+    warning: $warning
+);
+
+$padding-y: 0.5rem;
+$padding-x: 0.5rem;
+
+// GRID
+$grid-width: 100rem;
+$gutter-y: 4rem;
+$gutter-x: 4rem;

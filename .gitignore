@@ -1,0 +1,5 @@
+node_modules
+.prettierignore
+package-lock.json
+package.json
+.vscode/settings.json
